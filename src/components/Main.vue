@@ -1,5 +1,4 @@
 <template>
-
     <div class="container">
         <div class="left-column">
             <div class="header">
@@ -61,28 +60,30 @@ svg {
     left: 0;
 }
 .container{
-    max-width: 1200px;
+    /* outline: blue dotted; */
+    /* max-width: 1200px; */
     margin-right: auto;
     margin-left: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 5%;
-}
-.container-fluid {
-    display: flex;
-    flex-direction: row;
-    margin: 5% 9% 0 9%;
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
+    -webkit-flex-direction: row;
     
+    margin-top: 5%;
+    /* padding-bottom: 50%; */
 }
 
 .left-column{
     /* outline: blue dotted; */
     flex: 2;
+    -webkit-box-flex: 2;
     text-align: center;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
-    padding: 5% 10%;
+    padding: 0% 10%;
 }
 
 .left-column .header{
@@ -112,7 +113,7 @@ img#logo{
 .right-column{
     /* outline: red dotted; */
     flex: 1;
-    padding: 20px 0 20px 20px;
+    padding: 20px 0 0px 20px;
     text-align: left;
 }
 
@@ -120,7 +121,6 @@ img#logo{
 @media (min-width: 320px) and (max-width: 895px){
     .right-column{
         border-top: 7px blue solid;
-        margin: 0 50px;
     }
 }
 
@@ -143,6 +143,10 @@ form .form-fields{
 form .form-item{
     display: flex;
     flex-direction: column;
+}
+
+form input{
+    width: 50px;
 }
 
 </style>
